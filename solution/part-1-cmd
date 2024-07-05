@@ -1,0 +1,5 @@
+docker run -i -p 9393:9300 -e "CSVSERVER_BORDER=Orange" infracloudio/csvserver
+docker ps -a
+docker cp ./inputFile a493b84aafba:/csvserver/inputdata
+docker start a493b84aafba
+docker exec -i a493b84aafba sh
